@@ -1,11 +1,10 @@
 #include <iostream>
-#include <string>    // Для работы со строками
+#include <string>
 #include <locale.h>
 
 using namespace std;
 
 int main() {
-    // Настройка для русского языка
     setlocale(LC_ALL, "Russian");
     
     string password;
@@ -14,15 +13,14 @@ int main() {
     cout << "[+] Введите пароль: ";
     cin >> password;
     
-    // Проверяем пароль, пока не введен правильный
     while (password != correctPassword) {
         cout << "[-] Неверный пароль!\n";
         cout << "[+] Введите пароль: ";
         cin >> password;
     }
     
-    // Если пароль правильный
     cout << "[+] Добро пожаловать!\n";
     
     return 0;
+
 }
